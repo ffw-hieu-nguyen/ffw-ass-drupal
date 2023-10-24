@@ -1,0 +1,30 @@
+name: ffw-ass-drupal
+recipe: drupal9
+config:
+  webroot: web
+proxy:
+  appserver:
+    - site1.lndo.site
+    - site2.lndo.site
+    - site3.lndo.site
+#end-proxy
+services:
+  site1:
+    type: mysql:5.7
+    creds:
+      user: user
+      password: user
+      database: site1
+  site2:
+    type: mysql:5.7
+    creds:
+      user: user
+      password: user
+      database: site2
+  site3:
+    type: mysql:5.7
+    creds:
+      user: user
+      password: user
+      database: site3
+#end-services

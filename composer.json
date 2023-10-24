@@ -1,0 +1,93 @@
+{
+    "name": "drupal/legacy-project",
+    "description": "Project ffw assigment",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/config_split": "^1.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "^9",
+        "drupal/core-vendor-hardening": "^9",
+        "drupal/metatag": "^2.0",
+        "drupal/paragraphs": "^1.16",
+        "drupal/pathauto": "^1.12",
+        "drupal/redirect": "^1.9",
+        "drush/drush": "^11",
+        "drupal/tome": "^1.11",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "webflo/drupal-finder": "^1.2"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-vendor-hardening": true,
+            "cweagans/composer-patches": true,
+            "oomphinc/composer-installers-extender": true
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "./web"
+            },
+            "file-mapping": {
+                "[project-root]/.editorconfig": false,
+                "[project-root]/.gitattributes": false,
+                "[web-root]/.htaccess": false
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "patches": {
+            "drupal/core": {
+                "Allow an install hook in profiles installing from configuration": "https://www.drupal.org/files/issues/2022-05-19/2982052-80.patch"
+            },
+            "drupal/tome": {
+                "Error with static generation on CLI": "https://www.drupal.org/files/issues/2023-09-19/tome_fix_error_when_passing_drush_parameters.patch"
+            }
+        }
+    }
+}

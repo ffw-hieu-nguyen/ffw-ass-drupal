@@ -6,7 +6,8 @@
 # https://www.drupal.org/docs/develop/using-composer
 
 # Ignore configuration files that may contain sensitive information
-/web/sites/*/*settings*.php
+/web/sites/*/settings.local.php
+/web/sites/*/default.settings.php
 /web/sites/*/*services*.yml
 
 # Ignore paths that may contain user-generated content
@@ -24,6 +25,7 @@
 # Ignore drupal core (if not versioning drupal sources)
 /web/vendor
 /web/core
+/web/modules/contrib
 /web/modules/README.txt
 /web/profiles/README.txt
 /web/sites/development.services.yml
@@ -31,6 +33,7 @@
 /web/sites/example.sites.php
 /web/sites/README.txt
 /web/themes/README.txt
+/web/themes/contrib
 /web/.csslintrc
 /web/.editorconfig
 /web/.eslintignore
@@ -57,6 +60,9 @@
 /robo.phar
 /robo
 /drush.phar
-/drush
 /drupal.phar
 /drupal
+
+# Ignore another
+.idea/
+.DS_Store
