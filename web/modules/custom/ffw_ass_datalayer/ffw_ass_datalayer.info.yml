@@ -1,0 +1,5 @@
+type: module
+name: DataLayer Example FFW
+description: 'Pushes a data layer object to the front end block'
+package: Custom
+core_version_requirement: ^9 || ^10

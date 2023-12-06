@@ -1,0 +1,5 @@
+type: module
+name: Extend DataLayer Example FFW
+description: 'Extending data layer object of the front end block'
+package: Custom
+core_version_requirement: ^9 || ^10

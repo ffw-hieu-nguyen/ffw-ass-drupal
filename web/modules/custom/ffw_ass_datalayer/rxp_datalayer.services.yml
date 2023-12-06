@@ -1,0 +1,6 @@
+services:
+  ffw_ass_datalayer.metadata:
+    class: Drupal\ffw_ass_datalayer\NodeMetadataManager
+    arguments: 
+      - '@current_route_match'
+      - '@entity_type.manager'
