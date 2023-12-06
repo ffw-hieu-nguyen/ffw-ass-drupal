@@ -1,0 +1,19 @@
+uuid: a2df39fc-0f5b-413f-bcbe-a33c7231a7a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.split_view
+id: paragraph.split_view.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: split_view
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

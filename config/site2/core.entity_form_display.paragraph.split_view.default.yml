@@ -1,0 +1,54 @@
+uuid: acd0d36d-f6cc-4a5b-b6a6-31e073c7c86c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.split_view.field_image
+    - field.field.paragraph.split_view.field_link
+    - field.field.paragraph.split_view.field_teaser
+    - field.field.paragraph.split_view.field_title
+    - paragraphs.paragraphs_type.split_view
+  module:
+    - link
+id: paragraph.split_view.default
+targetEntityType: paragraph
+bundle: split_view
+mode: default
+content:
+  field_image:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_teaser:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

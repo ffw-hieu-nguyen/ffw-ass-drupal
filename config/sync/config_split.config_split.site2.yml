@@ -1,0 +1,23 @@
+uuid: c8b94342-710b-474f-80a8-a1467f78cedb
+langcode: en
+status: true
+dependencies: {  }
+id: site2
+label: site2
+description: ''
+weight: 0
+folder: ../config/site2
+module: {  }
+theme: {  }
+blacklist:
+  - system.site
+  - core.entity_form_display.paragraph.split_view.default
+  - core.entity_view_display.paragraph.split_view.default
+  - field.field.paragraph.split_view.field_image
+  - field.field.paragraph.split_view.field_link
+  - field.field.paragraph.split_view.field_teaser
+  - field.field.paragraph.split_view.field_title
+  - paragraphs.paragraphs_type.split_view
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

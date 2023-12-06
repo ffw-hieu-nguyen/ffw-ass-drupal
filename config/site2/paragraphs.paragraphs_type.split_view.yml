@@ -1,0 +1,10 @@
+uuid: e53f3e02-9555-4d48-a57f-f8b5823cc648
+langcode: en
+status: true
+dependencies: {  }
+id: split_view
+label: 'Split view'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

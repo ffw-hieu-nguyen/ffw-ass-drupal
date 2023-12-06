@@ -1,0 +1,17 @@
+uuid: bedce8b3-7d13-4b84-b201-b3cef65c7261
+langcode: en
+status: true
+dependencies: {  }
+id: site3
+label: site3
+description: ''
+weight: 0
+folder: ../config/site3
+module: {  }
+theme: {  }
+blacklist:
+  - system.site
+graylist:
+  - core.extension
+graylist_dependents: true
+graylist_skip_equal: true
